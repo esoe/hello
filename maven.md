@@ -1,0 +1,4 @@
+#garbage.maven
+
+пока стоит только обратить внимание на эту ссылку:
+https://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven
