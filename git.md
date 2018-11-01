@@ -10,6 +10,8 @@
 6. git merge new_feature
 7. должно создавать новый удаленный репозитарий git remote add origin https://github.com/esoe/hello.git
 8. убрать файл из текущих: git rm --cached <file>
+9. git push -u origin master
+
 
 
 и вообще это описание стоит переместить в репозитарий hello
