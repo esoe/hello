@@ -1,5 +1,8 @@
 #garbage.maven
 
+подробный пример подготовки *.pom
+https://habr.com/post/126966/
+
 подробное описание фреймворка maven^
 http://java-online.ru/maven-pom.xhtml
 
