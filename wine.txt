@@ -1,1 +1,28 @@
 #установка, настройка и особенности использования wine
+appdb.winehq.org //сайт поддержки wine
+
+#установка wine из PPA
+sudo dpkg --add-architecture i386
+wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+sudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+sudo apt install winehq-stable
+
+#установка winetricks
+wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+chmod +x winetricks
+
+#Основные команды
+wine --version //проверка версии wine
+winecfg //настройки windows
+winetricks //установка dll
+
+export WINEPREFIX="home/esoe/.wine/bnet" //создаем префикс, папку с названием name
+
+export WINEARCH=~/win64 //указываем его разрядность, можно win32
+export WINEARCH="win32"
+env WINEPREFIX="/home/esoe/.wine/bnet" winecfg //копируем файлы с базового префикса в новый
+
+кликом по приложению - запуск происходит в базовом префиксе.wine/
+env WINEPREFIX="/home/esoe/.wine/bnet" wine "/home/esoe/Downloads/Battle.net-Setup.exe" //запуск приложения в префиксе
+env WINEPREFIX="/home/esoe/.wine/bnet" wine "/home/esoe/.wine/bnet/drive_c/Program Files/Battle.net/Battle.net Launcher.exe"
+
