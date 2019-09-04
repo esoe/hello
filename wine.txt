@@ -7,6 +7,16 @@ wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
 sudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo apt install winehq-stable
 
+#установка wine-staging
+sudo dpkg --add-architecture i386
+sudo apt-key add Release.key
+sudo apt-add-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./'
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+sudo apt update
+sudo apt install --install-recommends winehq-staging
+
 #установка winetricks
 cd "${HOME}/Downloads"
 wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
