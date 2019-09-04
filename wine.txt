@@ -8,8 +8,10 @@ sudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/ bionic mai
 sudo apt install winehq-stable
 
 #установка winetricks
-wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+cd "${HOME}/Downloads"
+wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 chmod +x winetricks
+sudo cp winetricks /usr/local/bin
 
 #Основные команды
 wine --version //проверка версии wine
