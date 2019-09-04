@@ -26,3 +26,11 @@ env WINEPREFIX="/home/esoe/.wine/bnet" winecfg //копируем файлы с 
 env WINEPREFIX="/home/esoe/.wine/bnet" wine "/home/esoe/Downloads/Battle.net-Setup.exe" //запуск приложения в префиксе
 env WINEPREFIX="/home/esoe/.wine/bnet" wine "/home/esoe/.wine/bnet/drive_c/Program Files/Battle.net/Battle.net Launcher.exe"
 
+#удаление wine
+sudo apt-get purge wine-stable
+sudo apt-get autoremove
+sudo apt-get clean
+sudo apt-get install -f
+rm -f ~/.wine
+rm ~/.local/share/applications/wine/Программы
+rm ~/.local/share/applications/wine*
